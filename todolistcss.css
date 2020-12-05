@@ -1,0 +1,108 @@
+#addbar{
+    font-size:0; /*除间隔*/
+
+}
+
+#title{
+    color: white;
+}
+
+#header{
+    background-color: red;
+    text-align: center;
+}
+
+#list{
+    list-style: none;
+    font-size: 20px;
+    line-height: 50px;
+    text-indent: 4em;
+}
+
+#addtodo{
+    display: inline-block;
+    width: 600px;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 1em;
+
+}
+
+#addbt{
+    display: inline-block;
+    border: none;
+    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    cursor:pointer; 
+}
+
+#addbt:hover {
+    background-color: #dddddd;
+}
+
+li{
+    position: relative;
+    display: block;
+    color: black;
+    background-color: #FFFFE0;
+    /*鼠标悬停为手形，点击变化延时*/
+    cursor:pointer;
+    transition: 0.2s;
+}
+
+li:hover{
+    background: #dddddd;
+}
+
+li.checked{
+    color: white;
+    background-color: grey;
+    text-decoration:line-through;
+}
+
+
+span{ 
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 12px 0px 0px;
+    color:black;
+    text-align: center;
+}
+
+span:hover {
+    background-color: #f44336;
+    
+    color: white;
+}
+
+/* Include the padding and border in an element's total width and height */
+*{
+    box-sizing: border-box;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+
+body {
+    margin: 20;
+    min-width: 250px;
+}
+
+li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 14px;
+    left: 60px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    transition: 0.2s;
+  }

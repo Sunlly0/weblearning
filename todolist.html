@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todolistcss.css">
+    <script src="todolistjs.js"></script>
+    <link rel="Shortcut Icon" href="todolist_favicon.ico" type="image/x-icon" />
+    <title>Todo List</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <h1 id="title">Todolist</h1>
+            <div id="addbar">
+                <input type="text" id="addtodo" name="addtodo" placeholder="what would you like to do?">
+                <button type="button" id="addbt">Add</button>
+            </div>
+
+        </div>
+    
+        <div>
+            <ul id="list">
+                <!-- <li>listen to English</li>
+                <li class="checked">make a todolist</li>
+                <li>exercise</li>
+                <li >other</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <p id="test">test</p>
+
+    <script>
+        var m=new todoManager;
+        loadAll();
+        m.init();
+        display();
+        document.getElementById("addbt").addEventListener("click",add);
+        var list=document.getElementById("list");
+        list.addEventListener('click', choose);
+
+        //window.unbeforeunload()=save;
+        //save();
+
+        //loadAll();
+        //window.localStorage.clear();
+    </script>
+</body>
+</html>
